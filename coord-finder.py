@@ -3,8 +3,8 @@
 # Os valores devem ser inseridos sem sinal.
 
 #coordinates = [-5.1689538, -52.6662378] # Primeiro teste, em que consideramos coordenadas certamente obtidas com g,m,s
-#coordinates = [-30.4227334 , -49.2147833] # Primeiro teste, em que consideramos coordenadas certamente obtidas com g,m
-#coordinates = [-21.7080000,-44.9815000] # Coordenada A, em São Thomé das Letras
+#coordinates = [-30.4227334 , -49.2147833] # Segundo teste, em que consideramos coordenadas certamente obtidas com g,m
+coordinates = [-21.7080000,-44.9815000] # Coordenada A, em São Thomé das Letras
 #coordinates = [-23.9542030,-47.4387690] # Coordenada B, em Tapiraí
 #coordinates = [-15.3370333,-52.2526429] # Coordenada C, na Serra do Roncador
  
@@ -47,7 +47,7 @@ with open("trails-gms.txt", "w") as file:
                 file.write(f"Testando: g = {g}, m = {m}, s = {s:.3f} contra {test1} ou {test2} com candidato {candidate}\n")
                 
                 if candidate == test1 or candidate == test2:
-                    print(f"Encontrado! Podemos obter {abs_coordinates[i]} com g = {g}, m = {m}, s = {s:.3f}")
+                    print(f"Encontrado! Podemos obter {f"{abs_coordinates[i]:.7f}"} com g = {g}, m = {m}, s = {s:.3f}")
                     
                     found = True
                     break 
@@ -90,7 +90,7 @@ with open("trials-gm.txt", "w") as file:
             file.write(f"Testando: g = {g}, m = {m:.3f} contra {test1} ou {test2} com candidato {candidate}\n")
                 
             if candidate == test1 or candidate == test2:
-                print(f"Encontrado! Podemos obter {abs_coordinates[i]} com g = {g}, m = {m:.3f}")
+                print(f"Encontrado! Podemos obter {f"{abs_coordinates[i]:.7f}"} com g = {g}, m = {m:.3f}")
                 found = True
 
             if found:
