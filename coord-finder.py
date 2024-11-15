@@ -2,9 +2,9 @@
 
 # Os valores devem ser inseridos sem sinal.
 
-#coordinates = [-5.1689538, -52.6662378] # Primeiro teste, em que consideramos coordenadas certamente obtidas com g,m,s
+coordinates = [-5.1689538, -52.6662378] # Primeiro teste, em que consideramos coordenadas certamente obtidas com g,m,s
 #coordinates = [-30.4227334 , -49.2147833] # Segundo teste, em que consideramos coordenadas certamente obtidas com g,m
-coordinates = [-21.7080000,-44.9815000] # Coordenada A, em São Thomé das Letras
+#coordinates = [-21.7080000,-44.9815000] # Coordenada A, em São Thomé das Letras
 #coordinates = [-23.9542030,-47.4387690] # Coordenada B, em Tapiraí
 #coordinates = [-15.3370333,-52.2526429] # Coordenada C, na Serra do Roncador
  
@@ -58,7 +58,7 @@ with open("trails-gms.txt", "w") as file:
             if found:
                 break
         if not found:
-            print(f"Nenhuma solução encontrada para {candidate}")
+            print(f"Nenhuma solução encontrada para {f"{abs_coordinates[i]:.7f}"}")
         found = False
 
 # Teste para g, m
@@ -97,6 +97,6 @@ with open("trials-gm.txt", "w") as file:
                 break
 
         if not found:
-            print(f"Nenhuma solução encontrada para {abs_coordinates[i]}")
+            print(f"Nenhuma solução encontrada para {f"{abs_coordinates[i]:.7f}")
 
         found = False
