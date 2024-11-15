@@ -97,6 +97,6 @@ with open("trials-gm.txt", "w") as file:
                 break
 
         if not found:
-            print(f"Nenhuma solução encontrada para {f"{abs_coordinates[i]:.7f}"})
+            print(f"Nenhuma solução encontrada para {f"{abs_coordinates[i]:.7f}"}")
 
         found = False
